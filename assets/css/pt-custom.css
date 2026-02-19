@@ -34,6 +34,8 @@ body.landing #logo{ margin: 0 0 1em 0; }
   position: relative;
   padding: 4.5rem 0 3.5rem 0;
   background:
+    url("../../images/hero-bg.png") right center / cover no-repeat,
+    
     radial-gradient(1200px 600px at 25% 35%, rgba(255,255,255,.20), transparent 70%),
     radial-gradient(900px 500px at 80% 20%, rgba(255,255,255,.18), transparent 70%),
     linear-gradient(180deg, rgba(105,184,106,.30), rgba(105,184,106,.06) 55%, rgba(255,255,255,.00));
@@ -217,3 +219,12 @@ body.landing #logo{ margin: 0 0 1em 0; }
 input[type="submit"].style1{
   background: var(--pt-green) url("images/overlay.png");
 }
+
+.pt-hero:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(90deg, rgba(255,255,255,.92) 0%, rgba(255,255,255,.78) 45%, rgba(255,255,255,.35) 100%);
+  pointer-events:none;
+}
+.pt-hero .container{ position:relative; z-index:1; }
