@@ -119,6 +119,10 @@ a{color:inherit}
   padding: 1.25rem 0 1.15rem 0;
   border-radius: 26px;
 }
+.pt-hero-visual {
+  display: flex;
+  align-items: flex-end;
+}
 @media (max-width: 960px){
   .hero-grid{ grid-template-columns: 1fr; }
   .nav{ display:none; }
