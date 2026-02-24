@@ -116,7 +116,7 @@ a{color:inherit}
   align-items: flex-end;
 }
 @media (max-width: 960px){
-  .hero-grid{ grid-template-columns: 1fr; }
+  .pt-hero-grid{ grid-template-columns: 1fr; }
   .nav{ display:none; }
 }
 
