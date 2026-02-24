@@ -116,7 +116,7 @@ a{color:inherit}
   align-items: flex-end;
 }
 @media (max-width: 960px){
-  .pt-hero-grid{ grid-template-columns: 1fr; }
+  .hero-grid{ grid-template-columns: 1fr; }
   .nav{ display:none; }
 }
 
@@ -193,15 +193,15 @@ a{color:inherit}
 }
 
 .hero-visual{
-  min-height: 520px; /* room for lower positioning */
+  position:relative;
+  min-height: 360px;
+  
 }
 .hero-person{
   position:absolute;
   right: -10px;
-  bottom: -60px; /* 👈 move down */
+  bottom: -8px;
   width: min(430px, 70vw);
-  filter: drop-shadow(0 26px 35px rgba(0,0,0,.18));
-}dth: min(430px, 70vw);
   filter: drop-shadow(0 26px 35px rgba(0,0,0,.18));
 }
 @media (max-width: 960px){
