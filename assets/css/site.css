@@ -1,3 +1,7 @@
+
+/* PT Communications & Technology – 
+   Pure HTML/CSS (static), optimized for GitHub Pages.
+*/
 :root{
   --bg: #fbf4fb;
   --ink: #22222a;
@@ -105,15 +109,15 @@ a{color:inherit}
     radial-gradient(1200px 520px at 60% 90%, rgba(190,240,193,.18), rgba(190,240,193,0) 70%);
   pointer-events:none;
 }
-.pt-hero-grid{
+.hero-grid{
+  position:relative;
+  z-index:1;
   display:grid;
-  grid-template-columns: 1.1fr .9fr;
-  gap: 2.25rem;
-  align-items:end;   /* 👈 changed from center */
-}
-.pt-hero-visual {
-  display: flex;
-  align-items: flex-end;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 1.8rem;
+  align-items:center;
+  padding: 1.25rem 0 1.15rem 0;
+  border-radius: 26px;
 }
 @media (max-width: 960px){
   .hero-grid{ grid-template-columns: 1fr; }
@@ -187,15 +191,10 @@ a{color:inherit}
   box-shadow: 0 10px 20px rgba(0,0,0,.05);
 }
 .hero-social img{ width: 22px; height: 22px; object-fit: contain; }
-.pt-hero-visual img {
-  position: relative;
-  top: 60px;   
-}
 
 .hero-visual{
   position:relative;
   min-height: 360px;
-  
 }
 .hero-person{
   position:absolute;
@@ -301,12 +300,7 @@ a{color:inherit}
   background: linear-gradient(180deg, #3b2f41, #2b2433);
   border-color: rgba(255,255,255,.10);
 }
-.svc-img img{
-  width: 70%;
-  height: 70%;
-  object-fit: contain;
-  opacity: .95;
-}
+.svc-img img{width:100%; height:100%; object-fit:cover; display:block;}
 .fake-analytics{
   width: 92%;
   height: 85%;
@@ -518,4 +512,40 @@ a{color:inherit}
   margin-top: 1.2rem;
   color: var(--muted);
   font-size: .95rem;
+}
+
+
+/* Simple inner pages */
+.cards{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+@media (max-width: 980px){
+  .cards{ grid-template-columns: 1fr; }
+}
+.card{
+  background: rgba(255,255,255,.82);
+  border: 1px solid rgba(31,35,40,.08);
+  border-radius: 18px;
+  padding: 1.35rem;
+  box-shadow: 0 12px 28px rgba(31,35,40,.08);
+}
+.card h3{ margin:0 0 .35rem 0; }
+.muted{ color: rgba(31,35,40,.62); }
+
+.contact-grid{
+  display:grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 1.25rem;
+}
+@media (max-width: 980px){
+  .contact-grid{ grid-template-columns: 1fr; }
+}
+.contact-card{
+  background: rgba(255,255,255,.82);
+  border: 1px solid rgba(31,35,40,.08);
+  border-radius: 18px;
+  padding: 1.35rem;
+  box-shadow: 0 12px 28px rgba(31,35,40,.08);
 }
