@@ -200,8 +200,10 @@ a{color:inherit}
 .hero-person{
   position:absolute;
   right: -10px;
-  bottom: -8px;
+  bottom: -60px; /* 👈 move down */
   width: min(430px, 70vw);
+  filter: drop-shadow(0 26px 35px rgba(0,0,0,.18));
+}dth: min(430px, 70vw);
   filter: drop-shadow(0 26px 35px rgba(0,0,0,.18));
 }
 @media (max-width: 960px){
