@@ -288,27 +288,24 @@ a{color:inherit}
   min-height: 54px;
 }
 .svc-img{
-  height: 120px;
+  height: auto;              /* allow full image */
+  min-height: 140px;         /* keeps card layout consistent */
+  padding: 10px;
   border-radius: 16px;
   border: 1px solid rgba(0,0,0,.08);
   background: rgba(255,255,255,.55);
-  display:grid;
-  place-items:center;
-  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow: visible;         /* don't crop */
 }
-.svc-img.dark{
-  background: linear-gradient(180deg, #3b2f41, #2b2433);
-  border-color: rgba(255,255,255,.10);
-}
-.svc-img img{width:100%; height:100%; object-fit:cover; display:block;}
-.fake-analytics{
-  width: 92%;
-  height: 85%;
-  border-radius: 14px;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,.06)),
-    repeating-linear-gradient(90deg, rgba(255,255,255,.07) 0 2px, transparent 2px 26px);
-  position: relative;
+
+.svc-img img{
+  width: 100%;
+  height: auto;
+  max-height: 180px;         /* stops images from being too tall */
+  object-fit: contain;       /* NO crop */
+  display:block;
 }
 .fake-analytics:after{
   content:"";
