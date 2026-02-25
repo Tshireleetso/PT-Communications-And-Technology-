@@ -281,31 +281,39 @@ a{color:inherit}
   font-size: 1.05rem;
   font-weight: 800;
 }
-.svc-card p{
-  margin: 0 0 .9rem 0;
-  color: var(--muted);
-  font-size: .95rem;
-  min-height: 54px;
+/* --- FIX service cards layout (no overlap + full image visible) --- */
+
+.svc-card{
+  display: flex;
+  flex-direction: column;
+  gap: .85rem;
 }
+
 .svc-img{
-  height: auto;              /* allow full image */
-  min-height: 140px;         /* keeps card layout consistent */
-  padding: 10px;
+  height: 140px;                 /* reserves space so footer never overlaps */
   border-radius: 16px;
   border: 1px solid rgba(0,0,0,.08);
   background: rgba(255,255,255,.55);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow: visible;         /* don't crop */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;              /* keeps rounded corners clean */
 }
 
 .svc-img img{
   width: 100%;
-  height: auto;
-  max-height: 180px;         /* stops images from being too tall */
-  object-fit: contain;       /* NO crop */
-  display:block;
+  height: 100%;
+  object-fit: contain;           /* shows entire image (no crop) */
+  display: block;
+}
+
+/* keep footer pinned below image */
+.svc-footer{
+  margin-top: auto;              /* pushes footer to bottom of card */
+  display:flex;
+  justify-content:space-between;
+  gap:.7rem;
+  align-items:center;
 }
 .fake-analytics:after{
   content:"";
