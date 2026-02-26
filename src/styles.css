@@ -43,10 +43,15 @@ a{color:inherit}
 
 .topbar{
   padding: 1.1rem 0 .35rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(251,244,251,.72);
+  backdrop-filter: blur(6px);
 }
 .topbar-inner{
   display:flex;
-  align-items:flex-start;
+  align-items:center;
   justify-content:space-between;
   gap:1rem;
 }
@@ -85,19 +90,26 @@ a{color:inherit}
   gap: 1.1rem;
   flex-wrap:wrap;
   justify-content:flex-end;
-  padding-top: .35rem;
+  padding-top: 0;
 }
 .nav a{
   text-decoration:none;
   font-weight: 650;
   font-size: .95rem;
   color: rgba(0,0,0,.72);
+  transition: color .18s ease;
 }
-.nav a:hover{ color: rgba(0,0,0,.92); }
+.nav a:hover{
+  color: #2a6c34;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
 
 .hero{
   padding: 1.2rem 0 1.4rem 0;
   position: relative;
+  z-index: 1;
 }
 .hero:before{
   content:"";
@@ -195,6 +207,8 @@ a{color:inherit}
 .hero-visual{
   position:relative;
   min-height: 360px;
+  z-index: 0;
+  pointer-events: none;
 }
 .hero-person{
   position:absolute;
@@ -202,6 +216,8 @@ a{color:inherit}
   bottom: -8px;
   width: min(430px, 70vw);
   filter: drop-shadow(0 26px 35px rgba(0,0,0,.18));
+  pointer-events: none;
+  z-index: 0;
 }
 @media (max-width: 960px){
   .hero-visual{ min-height: 320px; }
@@ -212,6 +228,7 @@ a{color:inherit}
   position:absolute;
   inset: 0;
   pointer-events:none;
+  z-index: 0;
 }
 .fi{
   position:absolute;
@@ -239,11 +256,11 @@ a{color:inherit}
 .fi-ig{ left: 42%; top: 41%; transform: rotate(1deg); }
 .fi-tw{ left: 55%; top: 46%; transform: rotate(-2deg); }
 .fi-in{ left: 38%; top: 54%; transform: rotate(2deg); }
-.fi-fb:before{ background-image: url("../../images/icons/facebook.png"); }
-.fi-yt:before{ background-image: url("../../images/icons/play.png"); }
-.fi-ig:before{ background-image: url("../../images/icons/instagram.png"); }
-.fi-tw:before{ background-image: url("../../images/icons/twitter.png"); }
-.fi-in:before{ background-image: url("../../images/icons/linkedin.png"); }
+.fi-fb:before{ background-image: url("/images/icons/facebook.svg"); }
+.fi-yt:before{ background-image: url("/images/icons/youtube.svg"); }
+.fi-ig:before{ background-image: url("/images/icons/instagram.svg"); }
+.fi-tw:before{ background-image: url("/images/icons/twitter.svg"); }
+.fi-in:before{ background-image: url("/images/icons/linkedin.svg"); }
 
 .section{
   padding: 2.35rem 0;
@@ -329,13 +346,6 @@ a{color:inherit}
   opacity:.9;
 }
 
-.svc-footer{
-  margin-top: .9rem;
-  display:flex;
-  justify-content:space-between;
-  gap:.7rem;
-  align-items:center;
-}
 .svc-footer span{
   color: rgba(0,0,0,.70);
   font-size: .92rem;
@@ -441,6 +451,7 @@ a{color:inherit}
   display:grid;
   grid-template-columns: 1.1fr .9fr;
   gap: 1rem;
+  align-items:stretch;
 }
 @media (max-width: 960px){
   .footer-grid{ grid-template-columns: 1fr; }
@@ -452,6 +463,7 @@ a{color:inherit}
   padding: 1.2rem;
   box-shadow: 0 18px 40px rgba(0,0,0,.07);
   backdrop-filter: blur(8px);
+  height: 100%;
 }
 .contact-card h2{ font-family: var(--serif); margin: 0 0 .25rem 0; }
 .contact-card p{ margin: 0 0 1rem 0; color: var(--muted); }
@@ -547,10 +559,26 @@ a{color:inherit}
 @media (max-width: 980px){
   .contact-grid{ grid-template-columns: 1fr; }
 }
-.contact-card{
+.contact-grid .contact-card{
   background: rgba(255,255,255,.82);
   border: 1px solid rgba(31,35,40,.08);
   border-radius: 18px;
   padding: 1.35rem;
   box-shadow: 0 12px 28px rgba(31,35,40,.08);
 }
+
+/* Vue route page helpers */
+.inner-page .page-title {
+  font-family: var(--serif);
+  margin: 0 0 .5rem 0;
+}
+
+.inner-page .page-copy {
+  color: var(--muted);
+  margin: 0 0 1rem 0;
+}
+
+.nav a.router-link-active {
+  color: rgba(0,0,0,.92);
+}
+
