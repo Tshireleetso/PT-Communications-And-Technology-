@@ -1,7 +1,7 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
 
 export default defineConfig({
-  base: '/PT-Communications-And-Technology-/',
-  plugins: [vue()]
-})
+  plugins: [vue()],
+  base: "/PT-Communications-And-Technology-/", // must match your repo name exactly
+});
