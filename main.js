@@ -1,1 +1,37 @@
-const slides=[...document.querySelectorAll('.slide')];const dots=[...document.querySelectorAll('.dot')];let current=0;function showSlide(i){slides.forEach((s,n)=>s.classList.toggle('active',n===i));dots.forEach((d,n)=>d.classList.toggle('active',n===i));current=i}if(slides.length){setInterval(()=>showSlide((current+1)%slides.length),4200);dots.forEach((d,i)=>d.addEventListener('click',()=>showSlide(i)))}document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const el=document.querySelector(a.getAttribute('href'));if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth'})}}));
+const menuToggle = document.querySelector(".menu-toggle");
+const mainNav = document.querySelector(".main-nav");
+
+if (menuToggle && mainNav) {
+  menuToggle.addEventListener("click", () => {
+    mainNav.classList.toggle("open");
+  });
+}
+
+const slides = Array.from(document.querySelectorAll(".slide"));
+const dots = Array.from(document.querySelectorAll(".dot"));
+let currentSlide = 0;
+
+function showSlide(index) {
+  if (!slides.length || !dots.length) return;
+
+  slides[currentSlide].classList.remove("active");
+  dots[currentSlide].classList.remove("active");
+
+  currentSlide = index;
+
+  slides[currentSlide].classList.add("active");
+  dots[currentSlide].classList.add("active");
+}
+
+dots.forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    showSlide(index);
+  });
+});
+
+if (slides.length) {
+  setInterval(() => {
+    const nextSlide = (currentSlide + 1) % slides.length;
+    showSlide(nextSlide);
+  }, 5200);
+}
