@@ -14,8 +14,13 @@ let currentSlide = 0;
 function showSlide(index) {
   if (!slides.length || !dots.length) return;
 
-  slides[currentSlide].classList.remove("active");
-  dots[currentSlide].classList.remove("active");
+  slides.forEach((slide) => {
+    slide.classList.remove("active");
+  });
+
+  dots.forEach((dot) => {
+    dot.classList.remove("active");
+  });
 
   currentSlide = index;
 
