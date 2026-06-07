@@ -238,7 +238,7 @@ input {
 
 .slides {
   position: relative;
-  min-height: 220px;
+  min-height: 285px;
 }
 
 .slide {
@@ -259,8 +259,8 @@ input {
 .hero h1 {
   margin: 0 0 22px;
   font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(48px, 6vw, 82px);
-  line-height: 0.98;
+  font-size: clamp(46px, 5.6vw, 78px);
+  line-height: 1.02;
   letter-spacing: -0.04em;
   color: var(--ink);
 }
@@ -401,10 +401,10 @@ input {
 }
 
 .portrait-frame {
-  width: min(430px, 100%);
-  height: 470px;
-  border-radius: 38px 38px 0 0;
-  overflow: hidden;
+  width: min(470px, 100%);
+  height: 500px;
+  border-radius: 0;
+  overflow: visible;
   background: transparent;
   box-shadow: none;
   border: 0;
@@ -416,6 +416,7 @@ input {
   object-fit: contain;
   object-position: center bottom;
   background: transparent;
+  mix-blend-mode: multiply;
 }
 
 .section {
@@ -783,7 +784,7 @@ input {
   }
 
   .slides {
-    min-height: 250px;
+    min-height: 320px;
   }
 
   .hero-options {
@@ -833,11 +834,12 @@ input {
   }
 
   .hero h1 {
-    font-size: 44px;
+    font-size: 42px;
+    line-height: 1.05;
   }
 
   .slides {
-    min-height: 245px;
+    min-height: 330px;
   }
 
   .hero-actions {
@@ -854,7 +856,7 @@ input {
 
   .portrait-frame {
     height: 360px;
-    border-radius: 28px;
+    border-radius: 0;
   }
 
   .section {
