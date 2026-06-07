@@ -1,23 +1,14 @@
-# PT Communications & Technology Website
+# PT Communications & Technology
 
 GitHub Pages compatible static website.
 
-## Upload instructions
+Upload all files in this folder directly into the repository root. The site uses relative links only, so it works correctly at:
 
-Upload all files in this folder directly into the repository root:
+https://tshireleetso.github.io/PT-Communications-And-Technology-/
 
-`Tshireleetso/PT-Communications-And-Technology-`
-
-Do not upload this folder as a folder. Upload the files inside it.
-
-The site uses relative links, so it works at:
-
-`https://tshireleetso.github.io/PT-Communications-And-Technology-/`
-
-## Main files
-
-- `index.html` homepage
-- `styles.css` all styling
-- `main.js` hero slider
-- `hero-portrait.jpg` original header portrait image
-- `.nojekyll` GitHub Pages compatibility file
+Main files:
+- index.html
+- styles.css
+- main.js
+- service and support pages
+- .nojekyll
