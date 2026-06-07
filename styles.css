@@ -12,7 +12,6 @@
   --white: #ffffff;
   --shadow: 0 24px 60px rgba(20, 39, 37, 0.12);
   --soft-shadow: 0 14px 34px rgba(20, 39, 37, 0.08);
-  --radius: 24px;
 }
 
 * {
@@ -56,19 +55,19 @@ input {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(245, 248, 241, 0.9);
+  background: rgba(245, 248, 241, 0.94);
   backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .top-strip {
   background: linear-gradient(90deg, var(--green), var(--green-2));
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(255, 255, 255, 0.95);
   font-size: 13px;
 }
 
 .top-strip-inner {
-  min-height: 36px;
+  min-height: 34px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -126,10 +125,6 @@ input {
   font-size: 14px;
 }
 
-.main-nav a {
-  transition: color 0.2s ease;
-}
-
 .main-nav a:hover {
   color: var(--pink);
 }
@@ -162,11 +157,6 @@ input {
   font-weight: 800;
   border: 1px solid transparent;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
 }
 
 .btn-green {
@@ -216,7 +206,7 @@ input {
 
 .compact-hero {
   min-height: auto;
-  padding: 36px 0 40px;
+  padding: 34px 0 38px;
 }
 
 .hero-grid {
@@ -226,11 +216,11 @@ input {
   grid-template-columns: 1.05fr 0.95fr;
   gap: 42px;
   align-items: center;
-  min-height: 560px;
+  min-height: 520px;
 }
 
 .hero-copy {
-  padding: 16px 0 20px;
+  padding: 12px 0 16px;
 }
 
 .eyebrow {
@@ -248,7 +238,7 @@ input {
 
 .slides {
   position: relative;
-  min-height: 225px;
+  min-height: 220px;
 }
 
 .slide {
@@ -269,7 +259,7 @@ input {
 .hero h1 {
   margin: 0 0 22px;
   font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(48px, 6vw, 86px);
+  font-size: clamp(48px, 6vw, 82px);
   line-height: 0.98;
   letter-spacing: -0.04em;
   color: var(--ink);
@@ -301,7 +291,7 @@ input {
 .slide-dots {
   display: flex;
   gap: 10px;
-  margin: 12px 0 30px;
+  margin: 12px 0 28px;
 }
 
 .dot {
@@ -323,7 +313,7 @@ input {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .hero-option {
@@ -340,7 +330,7 @@ input {
   display: grid;
   place-items: center;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.76);
+  background: rgba(255, 255, 255, 0.78);
   color: var(--pink);
   box-shadow: var(--soft-shadow);
   font-weight: 900;
@@ -365,7 +355,7 @@ input {
   gap: 18px;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
 .trust-row {
@@ -393,47 +383,31 @@ input {
   margin-left: 0;
 }
 
-.hero-visual {
-  min-height: 500px;
-  position: relative;
-}
-
 .hero-visual.portrait-only {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  min-height: 500px;
+  min-height: 470px;
+  position: relative;
 }
 
 .hero-visual.portrait-only::before {
   content: "";
   position: absolute;
-  inset: 58px 10px 42px;
+  inset: 42px 0 36px;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.6);
   z-index: -1;
 }
 
-.hero-visual.portrait-only::after {
-  content: "";
-  position: absolute;
-  right: 14px;
-  top: 52px;
-  width: 120px;
-  height: 120px;
-  border-radius: 28px;
-  background: rgba(255, 255, 255, 0.28);
-  z-index: -1;
-}
-
 .portrait-frame {
   width: min(430px, 100%);
-  height: 500px;
+  height: 470px;
   border-radius: 38px 38px 0 0;
   overflow: hidden;
-  background: linear-gradient(140deg, #ffffff, #e8eee5);
-  box-shadow: var(--shadow);
-  border: 1px solid rgba(255, 255, 255, 0.72);
+  background: transparent;
+  box-shadow: none;
+  border: 0;
 }
 
 .portrait-frame img {
@@ -470,7 +444,6 @@ input {
 .service-row {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 0;
   background: var(--white);
   border-radius: 22px;
   border: 1px solid var(--line);
@@ -510,7 +483,6 @@ input {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
-  align-items: stretch;
 }
 
 .path-card {
@@ -522,7 +494,6 @@ input {
   border: 1px solid var(--line);
   display: flex;
   flex-direction: column;
-  text-align: left;
 }
 
 .path-card .icon {
@@ -858,7 +829,7 @@ input {
   }
 
   .compact-hero {
-    padding-top: 28px;
+    padding-top: 26px;
   }
 
   .hero h1 {
